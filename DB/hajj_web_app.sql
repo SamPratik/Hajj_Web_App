@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
+-- version 4.7.4
+-- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 09, 2017 at 11:46 AM
--- Server version: 10.1.19-MariaDB
--- PHP Version: 5.6.28
+-- Generation Time: Feb 08, 2018 at 08:00 PM
+-- Server version: 10.1.26-MariaDB
+-- PHP Version: 7.1.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -19,6 +21,25 @@ SET time_zone = "+00:00";
 --
 -- Database: `hajj_web_app`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin`
+--
+
+CREATE TABLE `admin` (
+  `id` int(11) NOT NULL,
+  `username` varchar(255) DEFAULT NULL,
+  `password` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`id`, `username`, `password`) VALUES
+(1, 'Pratik', 'acec8d4569c0f534245da103122432f7');
 
 -- --------------------------------------------------------
 
@@ -188,16 +209,24 @@ INSERT INTO `priligrim_info` (`id`, `nid`, `bc`, `residence`, `dob`, `gender`, `
 (161, '201414043', '', NULL, '2017-04-14', 'Male', 'group', 2, NULL, 'nid', '', 'Mehedi Farazi', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '0000-00-00', '0000-00-00', '', '', '', '', '', 'billionaires.jpg', 'image/jpeg', 29956),
 (162, '201414072', '', NULL, '1996-07-17', 'Male', 'group', 13, '', 'nid', '', 'Shushmoy Kundu', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '0000-00-00', '0000-00-00', '', '', '', '', '', 'block me from facebook today get ready to search me on google later.jpg', 'image/jpeg', 31394),
 (163, '', '238568923', 'Algeria', '2017-04-19', 'male', 'group', 18, NULL, 'bc', '', 'Masrafee', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '0000-00-00', '0000-00-00', '', '', '', '', '', 'confuse them with your silence and amaze them with your actions.jpg', 'image/jpeg', 31523),
-(164, '201414096', '', NULL, '1990-01-30', 'Male', 'group', 17, 'Government', 'nid', '', 'Mark Zuckerberg', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '0000-00-00', '0000-00-00', '', '', '', '', '', 'failure is success if you learn from it.jpg', 'image/jpeg', 35844),
+(164, '201414096', '', NULL, '1990-01-30', 'Male', 'group', 17, 'Government', 'nid', '', 'Mark Zuckerberg', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '2018-01-17', '0000-00-00', '', '', '', '', '', 'failure is success if you learn from it.jpg', 'image/jpeg', 35844),
 (165, '201414017', '', NULL, '1992-07-08', 'Male', 'group', 17, '', 'nid', '', 'Zisan', '', '', '', '', '', 'Barguna', 'Barisal', '', '', '', 'Barisal', 'Barisal', '', '', '', '', '', '0000-00-00', '0000-00-00', '', '', '', '', '', 'comeback is always greater than the setback.jpg', 'image/jpeg', 80525),
 (167, '', '2365826389', 'Armenia', '2002-02-06', 'male', 'group', 17, NULL, 'bc', '', 'Brad Hussy', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '0000-00-00', '0000-00-00', '', '', '', '', '', 'goals are more important.jpg', 'image/jpeg', 38289),
 (169, '', '753487', NULL, '1978-02-22', 'Male', 'group', 18, 'Government', 'bc', '', 'Abdur Rahman', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '0000-00-00', '0000-00-00', '', '', '', '', '', 'goku.jpg', 'image/jpeg', 134555),
 (170, '', '3758237', NULL, '2017-04-20', 'Male', 'group', 5, NULL, 'bc', '', 'Tahiat', '', '', '', '', '', 'Bogra', 'Rajshahi', '', '', '', 'Chittagong', 'Chittagong', '', '', '', '', '', '0000-00-00', '0000-00-00', '', '', '', '', '', 'i am an entrepreneur1.jpg', 'image/jpeg', 68901),
-(171, '201313008', '', NULL, '2017-04-20', 'Female', 'group', 18, NULL, 'nid', '', 'Kamrun Nahar', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '0000-00-00', '0000-00-00', '', '', '', '', '', 'i will.jpg', 'image/jpeg', 59200);
+(171, '201313008', '', NULL, '2017-04-20', 'Female', 'group', 18, NULL, 'nid', '', 'Kamrun Nahar', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '0000-00-00', '0000-00-00', '', '', '', '', '', 'i will.jpg', 'image/jpeg', 59200),
+(172, '2014140174', '', NULL, '2018-01-04', 'Male', 'individual', 0, 'Government', 'nid', '', '', '', '', '', '', '', 'Barguna', 'Barisal', '', '', '', 'Dinajpur', 'Rangpur', '', '', '', '', 'Passport2', '2018-01-16', '2018-01-12', '', '', '', '', '', '', '', 0),
+(173, '', '201818088', NULL, '2018-02-15', 'Male', 'individual', 0, 'Government', 'bc', '', 'Rahim Uddin Khan', '', '', '', '', '', 'Dhaka', 'Dhaka', '', '', '', 'Brahmanbaria', 'Chittagong', '', '', '', '', '', '0000-00-00', '0000-00-00', '', '', '', '', '', '', '', 0);
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `groups`
@@ -216,15 +245,24 @@ ALTER TABLE `priligrim_info`
 --
 
 --
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `groups`
 --
 ALTER TABLE `groups`
   MODIFY `grp_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+
 --
 -- AUTO_INCREMENT for table `priligrim_info`
 --
 ALTER TABLE `priligrim_info`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=172;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=174;
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

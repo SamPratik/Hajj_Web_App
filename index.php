@@ -7,7 +7,7 @@
 ?>
 
 <?php
-	$connection = mysqli_connect("localhost","root","","hajj_website");
+	$connection = mysqli_connect("localhost","root","","hajj_web_app");
 ?>
 
 <!doctype html>
