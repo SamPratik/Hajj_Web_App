@@ -1,11 +1,10 @@
-<?php session_start(); ?>
-
 <?php
-	if(empty($_SESSION)) {
+	session_start();
+	if($_SESSION["hajj_web_app"] != "Yes") {
 		header("location: index.php");
 	}
+	include_once("dbConnector.php");
 ?>
-<?php include_once("dbConnector.php"); ?>
 <!doctype html>
 <html>
 <head>
